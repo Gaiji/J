@@ -29,7 +29,7 @@ client.on('message', message => {
 	    let uuid = body.id;
             var url2 = 'http://hypixel.jp:5555/API/'+a+'.html'
             request(url2, function(err, response, body) {
-		Console.log(body+'');
+		console.log(body);
                 body = JSON.parse(body);
 		let rank;
 		if (body.rank === "yt") {
