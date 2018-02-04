@@ -59,6 +59,7 @@ client.on('message', message => {
 		}
 		let embed = new Discord.RichEmbed()
 	            .setDescription(a + "'s NNN Server Stats")
+		    .addField("Coins", zero(body.coin), true)
 		    .addField("Rank", zero(body.rank), true)
 	            .setColor(rank)
 	            .setThumbnail('https://crafatar.com/avatars/' + (uuid || '') + '?size=100')
