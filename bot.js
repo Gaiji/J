@@ -20,8 +20,8 @@ client.on('message', message => {
             request(url2, function(err, response, body) {
                 body = JSON.parse(body);
                 message.reply('Test:'+body.ip);
-            }
-        }
+            });
+        });
 });
 
 // THIS  MUST  BE  THIS  WAY
