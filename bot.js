@@ -47,7 +47,7 @@ client.on('message', message => {
 		}else if (body.rank === "admin") {
                     rank = '0xAA0000';
 		}else if (body.rank === "mod") {
-                    rank = '0x00AA00
+                    rank = '0x00AA00'
 		}else if (body.rank === "helper") {
                     rank = '0x0000AA';
 		}else if (body.rank === "nick") {
