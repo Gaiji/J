@@ -8,7 +8,9 @@ var request = require('request');
 client.on('ready', () => {
     console.log('I am ready!');
 });
-
+var contains = function(str, search) {
+  return (0 <= str.indexOf(search));
+};
 function zero(variable) {
     if (variable === undefined) {
         return 0;
@@ -30,7 +32,7 @@ client.on('message', message => {
             var url2 = 'http://hypixel.jp:5555/API/'+a+'.html'
             request(url2, function(err, response, body) {
 		console.log(body);
-		if (body.contains('404 | Page not found')){
+		if (contains(body, '404 | Page not found')) {
                     return message.reply('指定されたプレイヤーのステータスは存在しません');
 		}
                 body = JSON.parse(body);
