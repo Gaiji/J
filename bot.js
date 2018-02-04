@@ -19,7 +19,7 @@ client.on('message', message => {
             var url2 = 'http://hypixel.jp:5555/API/'+a+'.html'
             request(url2, function(err, response, body) {
                 body = JSON.parse(body);
-                message.reply('Test:'+body.ip):
+                message.reply('Test:'+body.ip);
             }
         }
 });
