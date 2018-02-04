@@ -1,13 +1,22 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+let prefix = '\'
+
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
+    if (message.content.startsWith(prefix + 'test')) {
+    	let args = message.content.split(" ").slice(1);
+        let a = args.join(" ")
+        var url = 'https://api.mojang.com/users/profiles/minecraft/'+a
+	    request(url, function(err, response, body) {
+            if(!body) {
+                return message.reply('指定されたプレイヤーは存在しません');
+            }
+        }
   	}
 });
 
