@@ -2,11 +2,12 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const snekfetch = require("snekfetch");
 
-let prefix = '@'
+let prefix = ';'
 
 var request = require('request');
 client.on('ready', () => {
     console.log('I am ready!');
+    client.user.setPresence({ game: { name: ';stats <player>', type: 0 } });
 });
 var contains = function(str, search) {
   return (0 <= str.indexOf(search));
