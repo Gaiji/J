@@ -31,7 +31,6 @@ client.on('message', message => {
 	    let uuid = body.id;
             var url2 = 'http://hypixel.jp:5555/API/'+a+'.html'
             request(url2, function(err, response, body) {
-		console.log(body);
 		if (contains(body, '404 | Page not found')) {
                     return message.reply('指定されたプレイヤーのステータスは存在しません');
 		}
