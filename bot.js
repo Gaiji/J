@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-let prefix = ';'
+let prefix = '@'
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -22,6 +22,7 @@ client.on('message', message => {
                 message.reply('Test:'+body.ip);
             });
         });
+    }
 });
 
 // THIS  MUST  BE  THIS  WAY
