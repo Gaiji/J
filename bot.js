@@ -16,6 +16,11 @@ client.on('message', message => {
             if(!body) {
                 return message.reply('指定されたプレイヤーは存在しません');
             }
+            var url2 = 'http://hypixel.jp:5555/API/'+a+'.html'
+            request(url2, function(err, response, body) {
+                body = JSON.parse(body);
+                message.reply('Test:'+body.ip):
+            }
         }
   	}
 });
