@@ -30,6 +30,9 @@ client.on('message', message => {
             var url2 = 'http://hypixel.jp:5555/API/'+a+'.html'
             request(url2, function(err, response, body) {
 		console.log(body);
+		if (body.contains('404 | Page not found')){
+                    return message.reply('指定されたプレイヤーのステータスは存在しません');
+		}
                 body = JSON.parse(body);
 		let rank;
 		if (body.rank === "yt") {
