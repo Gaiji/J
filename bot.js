@@ -1,8 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const snekfetch = require("snekfetch");
 
 let prefix = '@'
 
+var request = require('request');
 client.on('ready', () => {
     console.log('I am ready!');
 });
