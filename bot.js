@@ -12,7 +12,7 @@ client.on('message', message => {
     	let args = message.content.split(" ").slice(1);
         let a = args.join(" ");
         var url = 'https://api.mojang.com/users/profiles/minecraft/'+a
-	    request(url, function(err, response, body) {
+	request(url, function(err, response, body) {
             if(!body) {
                 return message.reply('指定されたプレイヤーは存在しません');
             }
@@ -22,7 +22,6 @@ client.on('message', message => {
                 message.reply('Test:'+body.ip):
             }
         }
-  	}
 });
 
 // THIS  MUST  BE  THIS  WAY
